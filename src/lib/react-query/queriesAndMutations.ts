@@ -58,6 +58,7 @@ export const useSignOutAccount = () => {
 export const useGetPosts = () => {
   return useInfiniteQuery({
     queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],
+    initialPageParam: undefined,
     queryFn: getInfinitePosts as any,
     getNextPageParam: (lastPage: any) => {
       // If there's no data, there are no more pages.
@@ -99,11 +100,11 @@ export const useCreatePost = () => {
   });
 };
 
-export const useGetPostById = (postId: string) => {
+export const useGetPostById = (postId?: string) => {
   return useQuery({
     queryKey: [QUERY_KEYS.GET_POST_BY_ID, postId],
     queryFn: () => getPostById(postId),
-    enabled: !! postId
+    enabled: !!postId,
   });
 };
 
