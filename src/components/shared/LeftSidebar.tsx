@@ -32,7 +32,7 @@ const LeftSidebar = () => {
           <img
             src="/assets/images/snappy.png"
             alt="logo"
-            width={130}
+            width={110}
             height={50}
           />
         </Link>
