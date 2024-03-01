@@ -66,7 +66,7 @@ const SigninForm = () => {
           Log in to your account
         </h2>
         <p className="text-light-3 small-medium md:base-regular mt-2">
-          A fun place to create your stories ✨
+          A fun place to post your stories ✨
         </p>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
